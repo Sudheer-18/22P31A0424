@@ -9,10 +9,8 @@ const bodypasrer = require("body-parser")
 const mongoose = require("mongoose")
 const nodemailer = require("nodemailer");
  const roters = require("./routes/users");
-// const log1 = require('./middleware/multerconfig');
 
-
-
+ 
 var app = express();
 
 mongoose.connect("mongodb+srv://kosireddysudheer803:pMImhxbsZ4QqAYDH@cluster0.stqqg.mongodb.net/Drive")
@@ -33,8 +31,6 @@ app.use(bodypasrer.json());
 app.use("/upload",roters);
 
 app.listen(5001, handlePort);   
-
-// app.use(log)
 
 app.use(logger('dev'));
 app.use(express.json());
